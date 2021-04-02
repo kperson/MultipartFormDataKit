@@ -10,6 +10,6 @@ public protocol BoundaryGenerator {
 
 public class RandomBoundaryGenerator: BoundaryGenerator {
     public static func generate() -> String {
-        return String(format: "%08x%08x", arc4random(), arc4random())
+        return UUID().uuidString
     }
 }
